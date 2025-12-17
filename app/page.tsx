@@ -1,20 +1,21 @@
 import React from "react";
-import Logo from "@/public/pulse-speed.jpeg";
+import Logo from "@/public/Image/pulse-speed.jpeg";
 import Image from "next/image";
 import { Server, Router, Play } from "lucide-react";
 import GraphVisualization from "./components/graphs/GraphVisualization";
 import Link from "next/link";
 
+
 const PulseSpeed = () => {
   return (
-    <div>
+    <div className="max-h-svh">
       <header className="border-b border-[#234832]/50 flex justify-between items-center p-2">
         <div className="flex items-center gap-4 ">
           <Image src={Logo} alt="Pulse Speed Logo" width={50} height={50} />
           <p>Pulse Speed</p>
         </div>
         <div className="flex gap-8">
-          <div className="flex items-center gap-2 border rounded-full p-2 border-[#234832] text-xs font-bold text-slate-300">
+          <div className="flex items-center gap-2 border rounded-full px-3 py-1.5 border-[#234832] text-xs font-bold text-slate-300">
             <Server size={16} />
             <p>192.168.1.45</p>
           </div>
@@ -24,8 +25,8 @@ const PulseSpeed = () => {
           </div>
         </div>
       </header>
-      <main>
-        <section className="p-5">
+      <main className=" mx-20 mt-5">
+        <section>
           <div className="flex items-center gap-2">
             {/* Pulsing dot */}
             <div className="relative flex items-center justify-center">
@@ -58,10 +59,10 @@ const PulseSpeed = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section className="mt-5">
           <GraphVisualization />
         </section>
-        <div className="flex items-center justify-center m-8 flex-col gap-4">
+        <div className="flex items-center justify-center mt-5 flex-col gap-4">
           <button className="flex items-center gap-2 bg-[#2bee79] text-black p-4 rounded-xl font-medium">
             <Play className="w-5 h-5" />
             <h1>Check Pulse</h1>

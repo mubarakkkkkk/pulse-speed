@@ -1,5 +1,5 @@
 import React from "react";
-import ProgressBar from "../components/ProgressBar";
+import ProgressBar from "../components/graphs/ProgressBar";
 import { AudioLines, Globe } from "lucide-react";
 import { Download } from "lucide-react";
 import { Upload } from "lucide-react";
